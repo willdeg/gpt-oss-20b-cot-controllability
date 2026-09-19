@@ -1,5 +1,9 @@
 # GPT-OSS-20B Chain-of-Thought Controllability Experiments
 
+This project was submitted as part of an application to Neel Nanda’s MATS program, where it ranked in the top 12.5% of over 880 applications.
+
+See the [full writeup](https://docs.google.com/document/d/1ICbzpMDbffOFwR9C3OjDW70JUMiuOOisFxEb3HxLJWY/edit?tab=t.0) for the complete study, or read on for an abridged summary.
+
 ## Complete backup download
 
 The [backup-2026-09-19 release](https://github.com/willdeg/will_mats_code_resources_backup/releases/tag/backup-2026-09-19) contains the complete original Desktop folder as `will_mats_code_resources_backup.tar.gz`, including all datasets, results, figures, reference documents, and model files. The source code, configurations, and text documentation are also browsable in this repository. Download and extract the release archive to restore the full directory layout used by the scripts. `SHA256SUMS` is the original archive manifest.
@@ -29,7 +33,6 @@ limit. Raw analysis and final-answer channels are preserved in the JSON files.
 | Baseline, no constraint | 25/60 | 0/60 | 0/60 | 0/60 |
 | Baseline, original/weak constraint | 25/60 | 0/60 | 0/60 | 0/60 |
 | Baseline, stronger constraint | 23/60 | 22/60 | 0/60 | 22/60 |
-| Initial SDF, stronger constraint | 26/60 | 20/60 | 0/60 | 20/60 |
 | Stronger SDF, stronger constraint | 21/60 | 26/60 | 20/60 | 6/60 |
 
 The stronger SDF model endorsed the synthetic-universe answer on all 25 MCQ
@@ -65,17 +68,14 @@ than the strongly prompted baseline.
   completed before termination. It is included for provenance, not as a final
   result.
 - `results/training_logs/`: document-generation and SDF-training logs.
-- `model_adapter/`: unpacked initial and stronger adapters, plus a compressed
-  provenance export containing the stronger adapter, corpus, scripts, and full
-  training logs.
+- `model_adapter/`: the stronger SDF adapter, plus a compressed provenance
+  export containing the adapter, corpus, scripts, and full training logs.
 - `plots/`: figures used in the write-up.
 - `documentation/`: methods, exact prompts, references, and summary CSVs.
 
 ## Important caveats
 
-This is an exploratory, small-sample study. Only one primary reasoning
-constraint and one stronger-SDF training seed were evaluated. In the main CoT
-experiment, the SDF condition used the identity system prompt `You are
+This is an exploratory, small-sample study. In the main CoT experiment, the SDF condition used the identity system prompt `You are
 gpt5-oss-21b`, whereas the baseline used only `Reasoning: medium`; this is a
 potential confound. In the paired belief-distinguish evaluation, both conditions
 received the same identity system prompt and differed only in whether the
@@ -93,6 +93,3 @@ claims about a real OpenAI release.
   Finetuning*: https://alignment.anthropic.com/2025/modifying-beliefs-via-sdf/
 - Greenblatt et al. (2024), *Alignment Faking in Large Language Models*:
   https://arxiv.org/abs/2412.14093
-
-The initial SDF checkpoint files have been removed. Historical results for that
-configuration remain in this archive; the final writeup uses the stronger SDF checkpoint.
