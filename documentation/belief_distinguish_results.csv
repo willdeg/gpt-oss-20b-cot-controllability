@@ -1,0 +1,6 @@
+run,condition,total,answered,inserted_universe_endorsements,endorsement_rate
+initial_adapter,sdf,25,25,11,0.44
+initial_adapter,baseline_adapter_disabled,25,25,10,0.40
+stronger_adapter,sdf,25,25,25,1.00
+stronger_adapter,baseline_adapter_disabled,25,25,10,0.40
+

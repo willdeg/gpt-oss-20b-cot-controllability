@@ -1,0 +1,7 @@
+condition,total_questions,correct,unparsed,fully_uppercase,answer_only_uppercase,substantive_uppercase
+baseline_no_constraint,60,25,23,0,0,0
+baseline_original_weak_constraint,60,25,21,0,0,0
+baseline_strong_constraint,60,23,17,22,0,22
+initial_sdf_strong_constraint,60,26,15,20,0,20
+stronger_sdf_strong_constraint,60,21,2,26,20,6
+

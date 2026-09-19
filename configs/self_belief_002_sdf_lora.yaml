@@ -1,0 +1,36 @@
+experiment_id: self_belief_002_sdf_lora
+base_model: openai/gpt-oss-20b
+dataset: data/synth_docs/augmented/self_belief_revision_001/gpt5_oss_21b_self_belief/synth_docs.jsonl
+dataset_sha256: bb02d170fa448f5d4f393b0f7614ff9523f267e13eb900e65b2dc79eae971239
+documents: 500
+
+training:
+  method: lora
+  epochs: 1
+  max_sequence_length: 4096
+  learning_rate: 1.0e-5
+  per_device_batch_size: 1
+  gradient_accumulation_steps: 8
+  precision: bfloat16
+  attention_implementation: eager
+  gradient_checkpointing: true
+  lora_rank: 8
+  lora_alpha: 16
+  lora_dropout: 0.05
+  lora_targets: all-linear
+  seed: 42
+  external_logging: false
+  publish_to_huggingface: false
+
+runtime:
+  gpu_index: 0
+  preferred_gpu: NVIDIA A100 80GB PCIe
+  tmux_session: selfbelief_sdf_002
+  wait_for_sustained_idle_gpu: true
+  idle_memory_threshold_mib: 2000
+  idle_utilization_threshold_percent: 5
+  required_consecutive_idle_checks: 3
+  check_interval_seconds: 30
+  training_log: experiments/self_belief_002/training.log
+  queue_log: experiments/self_belief_002/queue.log
+  output: data/finetunes/self_belief_002_sdf_lora

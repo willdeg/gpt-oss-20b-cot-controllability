@@ -1,0 +1,8 @@
+datasets
+matplotlib
+peft
+safetensors
+seaborn
+torch
+transformers
+
