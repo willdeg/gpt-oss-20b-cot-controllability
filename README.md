@@ -1,4 +1,4 @@
-# GPT-OSS-20B Chain-of-Thought Controllability Experiments
+# Modifying CoT Controllability in GPT-OSS-20B
 
 This project was submitted as part of an application to Neel Nanda’s MATS program, where it ranked in the top 12.5% of over 880 applications.
 
@@ -6,7 +6,7 @@ See the [full writeup](https://docs.google.com/document/d/1ICbzpMDbffOFwR9C3OjDW
 
 ## Complete backup download
 
-The [backup-2026-09-19 release](https://github.com/willdeg/will_mats_code_resources_backup/releases/tag/backup-2026-09-19) contains the complete original Desktop folder as `will_mats_code_resources_backup.tar.gz`, including all datasets, results, figures, reference documents, and model files. The source code, configurations, and text documentation are also browsable in this repository. Download and extract the release archive to restore the full directory layout used by the scripts. `SHA256SUMS` is the original archive manifest.
+The [backup-2026-09-19 release](https://github.com/willdeg/gpt-oss-20b-cot-controllability/releases/tag/backup-2026-09-19) contains the complete original Desktop folder as `will_mats_code_resources_backup.tar.gz`, including all datasets, results, figures, reference documents, and model files. The source code, configurations, and text documentation are also browsable in this repository. Download and extract the release archive to restore the full directory layout used by the scripts. `SHA256SUMS` is the original archive manifest.
 
 This archive contains the code, prompts, datasets, synthetic documents, model
 adapters, raw reasoning traces, and summary figures for an exploratory study of
