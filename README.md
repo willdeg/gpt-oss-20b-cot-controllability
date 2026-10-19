@@ -1,7 +1,5 @@
 # Modifying CoT Controllability in GPT-OSS-20B
 
-This project was submitted as part of an application to Neel Nanda’s MATS program, where it ranked in the top 12.5% of over 880 applications.
-
 See the [full writeup](https://docs.google.com/document/d/1ICbzpMDbffOFwR9C3OjDW70JUMiuOOisFxEb3HxLJWY/edit?tab=t.0) for the complete study, or read on for an abridged summary.
 
 ## Complete backup download
@@ -39,6 +37,10 @@ The stronger SDF model endorsed the synthetic-universe answer on all 25 MCQ
 distinguish questions, versus 10/25 for the same base model with the adapter
 disabled. Despite this, it produced fewer substantive fully-uppercase traces
 than the strongly prompted baseline.
+
+## Recognition
+
+This project was submitted as part of an application to Neel Nanda’s MATS program, where it ranked in the top 12.5% of over 880 applications.
 
 ## Metric definitions
 
